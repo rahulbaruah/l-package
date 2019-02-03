@@ -1,0 +1,54 @@
+{
+    "name": "rahulbaruah/l-package",
+    "description": "Laravel package",
+    "keywords": [
+        "rahulbaruah",
+        "l-package"
+    ],
+    "homepage": "https://github.com/rahulbaruah/l-package",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rahul Baruah",
+            "email": "baruah.rahul.88@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rahulbaruah\\LPackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rahulbaruah\\LPackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rahulbaruah\\LPackage\\LPackageServiceProvider"
+            ],
+            "aliases": {
+                "LPackage": "Rahulbaruah\\LPackage\\LPackageFacade"
+            }
+        }
+    }
+}
